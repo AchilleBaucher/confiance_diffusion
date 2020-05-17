@@ -1,4 +1,4 @@
-# poli_diffusion
+# Confiance et diffusion
 ## Principe
 * On modélise les opinions individuelles et institutionelles par un graphe d'associations d'idées (+arguments?) = cadre de référence
 * On modélise le comportement d'acceptation d'information par une appplication du modèle de confiance de l'article d'Adrien
