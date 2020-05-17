@@ -11,8 +11,8 @@
 À quel point je veux croire ce que me dit ma source ?
 
 **Mesure** :
-* La proximité pondérée dans un graphe d'opinions, obtenue par des likes facebook etx
 * La cohérence globale des informations de cette source avec mon cadre de référence
+* Ou/et la proximité dans un graphe d'opinions, obtenue par des abonnements à des sources ou par des comparaison de sujets communs ...
 
 **Justification** :
  
