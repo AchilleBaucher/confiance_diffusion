@@ -62,3 +62,7 @@ Ou sont elles inclues dans les autres ?
 ## Questions
 * Diffusion d'information : comment représenter ?
 * Apprentissage Kernels
+
+## Idées supplémentaires
+* Système multi-agent (NetLogo http://www.lirmm.fr/~ferber/ProgAgent/index.html)
+
