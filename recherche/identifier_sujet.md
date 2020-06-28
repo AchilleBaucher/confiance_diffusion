@@ -9,20 +9,6 @@ Identifier de quoi parle les lettres pour les regrouper par sujet.
 Faire la moyenne des vecteurs de la phrase ou du titre :
 https://freecontent.manning.com/sentence-classification-in-nlp/
 
-## Méthode : thème avec LDA (Latent Dirichlet Allocation)
-Wikipedia : choisir K sujets et chaque document a des scores e probabilité (Bayes) dans chaque sujet.
-* Pratique utilisecomparer  : https://www.pluralsight.com/guides/topic-identification-nlp
-
-* Utilisation de LDA + EM Bayes : http://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf
-* tagging :  http://papers.nips.cc/paper/2587-integrating-topics-and-syntax.pdf
-
-## Topic Modelling
-Latent Semantic Analysis (LSA) pour déduire plus la sémantique latente, le sens du texte, que le champs lexical. Demande de faire un tfidf.
-* Explication du calcul : http://blog.onyme.com/stats-semantique-lsa/
-* Article original : http://lsa.colorado.edu/papers/JASIS.lsi.90.pdf
-https://www.pluralsight.com/guides/topic-identification-nlp
-* Version probabiliste : https://arxiv.org/pdf/1301.6705.pdf
-
 ## Méthode : deep contextualized word representation
 * Représenter conexte bidirectionnal : https://arxiv.org/pdf/1802.05365.pdf
 
@@ -66,6 +52,12 @@ Bidirectionnal Encoder Represntation from Transformers
 * From https://medium.com/inside-machine-learning/what-is-a-transformer-d07dd1fbec04
 * **Seq2Seq** : transforme un sequence de token en une autre séquence, traduction par ex. Uses LSTM qui permet de prendre en compte l'ordre des sentences et de sélectionner ce qui est important. Encoder en vecteur avec bcp de dimensions et décoder en sequence. Le LSTM permet de prendre en compte l'importance des token (attention) en les pondérants dans l'encodage et le décodage.
 * **Transfomers** : Pas LSTM ni RNN
+#### BERT.2.Attention
+https://lesdieuxducode.com/blog/2019/4/bert--le-transformer-model-qui-sentraine-et-qui-represente
+* Attention : Repérer les mots importants, encodeur indique à décodeur
+* Self-attention : Au sein de l'encodeur ou du décodeur.
+* https://www.youtube.com/watch?v=S27pHKBEp30
+* ReLU ou GeLU > sigmoïde ou tanh
 
 ## Summarization
 * Génération de résumé abstraits avec NN :

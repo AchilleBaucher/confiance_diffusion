@@ -1,83 +1,31 @@
-# Clustering de textes et de paragraphes
-## Principe
-Tenter d'extraire des infos :
-* Thème
-* Opinion
-* Argument
-* ...
-d'un texte/paragraphe.
+# Clustering
+Trouver des clusters et des distances entre lettres.
+* Résume et référence de nombreuses méthodes : http://edutechwiki.unige.ch/fr/Clustering_et_classification_hi%C3%A9rarchique_en_text_mining
 
-## Utilisation
-S'en servir pour faire des graphes s'appuyant sur ces liens.
+## À base de TF-IDF
+* TD-IDF puis DTW et classification de séries temporelles : https://www-ljk.imag.fr/membres/Marianne.Clausel/Fichiers/DefenseClustering.pdf
+* TF-IDF puis k-means : https://towardsdatascience.com/applying-machine-learning-to-classify-an-unsupervised-text-document-e7bb6265f52
 
-## 1. Exploration des possibles
-### Idées supplémentaires
-Clustering avec des graphes d'associations d'idées. Trouver mesure de similarité entre graphes (noyeaux thèse MJL)
+## LSA Latent Semantic Analysis
+Pour déduire plus la sémantique latente, le sens du texte, que le champs lexical. Demande de faire un tfidf.
+* Explication du calcul : http://blog.onyme.com/stats-semantique-lsa/
+Effectuer une SVD sur la matrice document-terme avec score d'occurence ou du tfidf. Ne sélectionner que les valeurs singulières les plus hautes, avec un rang k choisi. Calculer l'approximation de la matrice au rang k. En déduire les distances (cosine) entre les deocuments.
+* Article original : http://lsa.colorado.edu/papers/JASIS.lsi.90.pdf
+* Avec python : https://www.pluralsight.com/guides/topic-identification-nlp ou https://www.analyticsvidhya.com/blog/2018/10/stepwise-guide-topic-modeling-latent-semantic-analysis/
+* Version probabiliste : https://arxiv.org/pdf/1301.6705.pdf
 
-### Articles reçus :
-1. https://arxiv.org/abs/1907.07672?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+arxiv%2FQSXk+%28ExcitingAds%21+cs+updates+on+arXiv.org%29
-2. https://medium.com/ether-labs/bert-for-unsupervised-text-tasks-fa6e9ce5d133
-3. https://arxiv.org/abs/1905.11558
+## Hyperspace Analogue to Language (HAL)
+Extrait les cooccurrences pour faire des liens entre les mots.
+* Explication : http://blog.onyme.com/stats-semantique-hal/
 
+## LDA (Latent Dirichlet Allocation)
+Wikipedia : choisir K sujets et les documents ainsi que les mots ont des scores de probabilité (Bayes) dans chaque sujet. On part de la matrice des occurrences.
+* Article original : http://papers.nips.cc/paper/2070-latent-dirichlet-allocation.pdf
+* Python Gensim :  https://www.pluralsight.com/guides/topic-identification-nlp
+* Python Scikit-Learn (utilisé):  https://medium.com/mlreview/topic-modeling-with-scikit-learn-e80d33668730
+* Utilisation de LDA + EM Bayes : http://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf
+* tagging :  http://papers.nips.cc/paper/2587-integrating-topics-and-syntax.pdf
 
-
-### 1. Analysis of Word Embeddings using Fuzzy Clustering
-On peut obtenir des clusters de contextes de mots.
-Appliquer du fuzzy clustering sur des vecteurs de word embedding
-
-#### Fuzzy clustering
- Les points appartiennent à plusieurs clusters avec des coefficients différents.
-* C-means = K-means fuzzy.
-* fuzzy Gustafson-Kessel = augmented version pour reconnaitre shapes, en changeant la mesure de distance et le critère à minimiser.
-* indicateurs de qualité : FPC, XB
-
-
-####Word embedding
-Mot représenté comme vecteur de nombre réels.
-* GloVe [10] populaire algorithme : optimisation bayes avec coocurrences, résultat trainning matrice associe à chaque mot son vecteur. Mesure de similarité possible ensuite entre ces vecteurs.
-* Word2vec : entraînement réseau neuronal, matrice sous produite
-
-#### Résultats
- Appliquer FCM m=1.1, avec GloVe dim = 50 et 100 pour ~ centaines de mots. FGK très bof. Trop grande dimension = mauvais. Nombre de clusters fixé à vue de nez sur un graphique. On trouve des clusters de mots (on dit appartient à cluster si valeur d'appartenance >  seuil).
-
-#### Utilisation
-* Choisir quels sont les clusters : partis et obtenir les scores des mots sur-représentés, députés thèmes etc = NON car unsepervised.
-* UNSUPERVISED :
-* Entrainer les clusters au préalable, puis on peut ainsi en déduire les mots adaptés au contexte à sélectionner.
-
-#### À se renseigner
-* Trouver le bon nombre de clusters, ici fait arbitrairement.
-
-#### Wikipedia Word embedding
-Word2Vec,Mikolov, qui s'appuie sur les réseaux neuronaux. Voir schéma :
-* **Contniuous bag-of-words** :
-* **Skip-gram** : On a en entrée les *V* mots qu'on veut vectoriser, en sortie le mot prédit. Chaque exemple d'apprentissage est un **contexte**, qui associe à chaque mot présent ou absent.
-
-### 2. BERT for unsupervised text tasks
-#### BERT :
-Améliore word embedding en étant bidirectionnel et se plaçant dans la signification de la phrase.
-* Modèle BERT pour le français : https://camembert-model.fr/ et https://arxiv.org/pdf/1911.03894.pdf
-
-* Explication de BERT https://ai.googleblog.com/2018/11/open-sourcing-bert-state-of-art-pre.html et https://arxiv.org/pdf/1810.04805.pdf
-
-### 3. Leap LSTM
-Propose une appllication de leap LSTM, plus efficace pour plusieurs tâches de NLP.
-VOIR LES RÉFÉRENCES:
-* Skim-RNN Seo et al 2017 : mini RNN pour les mots unimportant
-
-[We present a novel modification to standard LSTM,
-which learns to fuse information from various levels and
-skip unimportant words if needed when reading texts.]
-
-Les précédents LSTM ne prennent pas en compte tous les mots.
-[More specifically, we design efficient feature
-encoders to extract messages from preceding texts, following
-texts and the current word for the decision at each step]
-
-Le réseau indique à chaque exemple si on doit skip ou entraîner le LSTM. Usage d'un CNN.
-Nécessite un GloVe pour fonctionner, mais comme celui -ci est aussi entraîné, les mots inconnus sont initialisés alétoirement.
-
-Alméliorations LEGERE de performance. Mots importants en table 5.
-
-### 4. Summarization with Pointer-Generator Networks
-Résumé de textes. Nouveaux mots résume le texte.
+## NMF Factorization par matrices non négatives
+* Effectuer le TF-IDF et décomposer avec NMF en deux matrices qui associent respectivement à chaque document et à chaque terme des valeurs positives dans des dimensions de taille choisie.
+* Python scikit learn https://medium.com/mlreview/topic-modeling-with-scikit-learn-e80d33668730

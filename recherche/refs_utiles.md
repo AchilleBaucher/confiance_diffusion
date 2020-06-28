@@ -25,3 +25,19 @@ https://fauconnier.github.io/#data
 
 python et c
 https://github.com/danielfrg/word2vec
+
+GSL
+* https://www.gnu.org/software/gsl/
+* https://www.gnu.org/software/gsl/doc/html/index.html
+
+Algebre linéaire cpp
+* eigen : http://eigen.tuxfamily.org/index.php?title=Main_Page
+
+Analyse image cpp
+* opencv : https://sourceforge.net/projects/opencvlibrary/
+
+Visualisation pour réduction de dimension python
+* Umap : https://umap-learn.readthedocs.io/en/latest/
+
+* stats en NLP
+https://www.cs.vassar.edu/~cs366/docs/Manning_Schuetze_StatisticalNLP.pdf

@@ -1,2 +1,2 @@
-* Pertinence et méthodes dans l'approche par indicateur/ estimateur statistique, par ex répartition des députés dans les rubriques
-* 
+* C'est quoi la forme en X ?
+* Trouver croisement sur fonction carrée
