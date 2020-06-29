@@ -25,7 +25,7 @@ Wikipedia : choisir K sujets et les documents ainsi que les mots ont des scores 
 * Python Scikit-Learn (utilisé):  https://medium.com/mlreview/topic-modeling-with-scikit-learn-e80d33668730
 * Utilisation de LDA + EM Bayes : http://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf
 * tagging :  http://papers.nips.cc/paper/2587-integrating-topics-and-syntax.pdf
-
+* clustreing : https://engineering.flipboard.com/2017/02/storyclustering
 ## NMF Factorization par matrices non négatives
 * Effectuer le TF-IDF et décomposer avec NMF en deux matrices qui associent respectivement à chaque document et à chaque terme des valeurs positives dans des dimensions de taille choisie.
 * Python scikit learn https://medium.com/mlreview/topic-modeling-with-scikit-learn-e80d33668730
