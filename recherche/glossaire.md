@@ -40,3 +40,14 @@ MM* = I
 # NMF Non-Negative Matrix Factorization
 Factoriser une matrice M m*p en W m*r et H r*p avec comme contrainte la non négativité
 * Explication du principe et de l'algo :  https://www.math.univ-toulouse.fr/~besse/Wikistat/pdf/st-m-explo-nmf.pdf
+
+# AIC et BIC
+Score de pénalité d'un modèle statistique. Mesure la perte d'information du modèle. Version AICc pour les petits échantillons. BIC dépend de la taille de l'échantillon et pas seulement du nombre de paramètres.
+
+## Arbre KD
+Permet de faire des recherches par voisinage très rapidement. Version relaxée.
+
+## Octree
+Partition spatiale. Détection collision 3D
+
+## Partition binaire de l'espace

@@ -24,7 +24,8 @@ https://fauconnier.github.io/#data
 
 
 python et c
-https://github.com/danielfrg/word2vec
+* https://github.com/danielfrg/word2vec
+* https://github.com/mynameisfiber/pyxmeans
 
 GSL
 * https://www.gnu.org/software/gsl/

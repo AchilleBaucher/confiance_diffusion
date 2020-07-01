@@ -26,6 +26,25 @@ Wikipedia : choisir K sujets et les documents ainsi que les mots ont des scores 
 * Utilisation de LDA + EM Bayes : http://www.jmlr.org/papers/volume3/blei03a/blei03a.pdf
 * tagging :  http://papers.nips.cc/paper/2587-integrating-topics-and-syntax.pdf
 * clustreing : https://engineering.flipboard.com/2017/02/storyclustering
+
 ## NMF Factorization par matrices non négatives
 * Effectuer le TF-IDF et décomposer avec NMF en deux matrices qui associent respectivement à chaque document et à chaque terme des valeurs positives dans des dimensions de taille choisie.
 * Python scikit learn https://medium.com/mlreview/topic-modeling-with-scikit-learn-e80d33668730
+
+## X-Means
+Extention du k-means avec une estimation du nombre de clusters.
+* Article original : https://www.cs.cmu.edu/~dpelleg/download/xmeans.pdf
+**Algorithme** :
+* Donner borne inf et sup de K
+* Partir de la borne inf
+* A chaque itération :
+    * Run k-means jusqu'à convergence
+    * Pour chaque cluster :
+        * Diviser en 2 et faire 2-means
+        * Décider de garder 1 ou 2 avec le BIC
+        * BIC avec log vraissmeblance de spheric gaussian
+**Mesures d'accélération** :
+* Éviter doublons de calculs
+* Structures en kd-tree
+**Python** :
+https://pyclustering.github.io/docs/0.9.3/html/d2/d8b/namespacepyclustering_1_1cluster_1_1xmeans.html
