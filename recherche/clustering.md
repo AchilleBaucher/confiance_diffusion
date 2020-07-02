@@ -1,4 +1,4 @@
-# Clustering
+    # Clustering
 Trouver des clusters et des distances entre lettres.
 * Résume et référence de nombreuses méthodes : http://edutechwiki.unige.ch/fr/Clustering_et_classification_hi%C3%A9rarchique_en_text_mining
 
@@ -30,6 +30,7 @@ Wikipedia : choisir K sujets et les documents ainsi que les mots ont des scores 
 ## NMF Factorization par matrices non négatives
 * Effectuer le TF-IDF et décomposer avec NMF en deux matrices qui associent respectivement à chaque document et à chaque terme des valeurs positives dans des dimensions de taille choisie.
 * Python scikit learn https://medium.com/mlreview/topic-modeling-with-scikit-learn-e80d33668730
+* Article clustering :   https://people.eecs.berkeley.edu/~jfc/hcc/courseSP05/lecs/lec14/NMF03.pdf
 
 ## X-Means
 Extention du k-means avec une estimation du nombre de clusters.
@@ -45,6 +46,6 @@ Extention du k-means avec une estimation du nombre de clusters.
         * BIC avec log vraissmeblance de spheric gaussian
 **Mesures d'accélération** :
 * Éviter doublons de calculs
-* Structures en kd-tree
+* Structures en kd-treeb
 **Python** :
 https://pyclustering.github.io/docs/0.9.3/html/d2/d8b/namespacepyclustering_1_1cluster_1_1xmeans.html

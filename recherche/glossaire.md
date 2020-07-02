@@ -44,10 +44,32 @@ Factoriser une matrice M m*p en W m*r et H r*p avec comme contrainte la non nég
 # AIC et BIC
 Score de pénalité d'un modèle statistique. Mesure la perte d'information du modèle. Version AICc pour les petits échantillons. BIC dépend de la taille de l'échantillon et pas seulement du nombre de paramètres.
 
-## Arbre KD
+# Arbre KD
 Permet de faire des recherches par voisinage très rapidement. Version relaxée.
 
-## Octree
+# Octree
 Partition spatiale. Détection collision 3D
 
-## Partition binaire de l'espace
+# Partition binaire de l'espace
+
+# UMAP
+Uniform Manifold
+Approximation and Projection for
+Dimension Reduction : Technique pour la réduction de dimension. La théorie s'appuie sur la gémoétrie de Riemann.
+* Article original : https://arxiv.org/pdf/1802.03426.pdf
+* Python : https://umap-learn.readthedocs.io/en/latest/
+* Suppose que les données sont uniformément représentées sur une variété géométrique inconnue.
+* On peut trouver une métrique de Riemann tel que c'est le cas.
+* ...
+
+# Géométrie Riemannienne
+Branche de la géométrie différentielle sur des formes ou existent une notion d'angle et de distance.
+
+# Géométrie différentielle
+Application des méthodes de calcul différentiel à la géométrie.
+
+# Manifold (variété)
+Peut passer en dimension + ...
+
+# Geodesic distance
+Généralisation du concept de distance effective sur des surfaces
