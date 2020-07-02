@@ -1,2 +1,1 @@
-* C'est quoi la forme en X ?
-* Trouver croisement sur fonction carrée
+* On ne cherche pas à distinguer plusieurs clusters mais à en repérer certains
