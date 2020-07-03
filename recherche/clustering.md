@@ -1,4 +1,4 @@
-    # Clustering
+# Clustering
 Trouver des clusters et des distances entre lettres.
 * Résume et référence de nombreuses méthodes : http://edutechwiki.unige.ch/fr/Clustering_et_classification_hi%C3%A9rarchique_en_text_mining
 
@@ -49,3 +49,7 @@ Extention du k-means avec une estimation du nombre de clusters.
 * Structures en kd-treeb
 **Python** :
 https://pyclustering.github.io/docs/0.9.3/html/d2/d8b/namespacepyclustering_1_1cluster_1_1xmeans.html
+
+## Critères de sélection
+https://statweb.stanford.edu/~gwalther/gap
+https://cran.r-project.org/web/packages/clusterCrit/vignettes/clusterCrit.pdf
