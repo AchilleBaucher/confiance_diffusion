@@ -67,3 +67,12 @@ https://cran.r-project.org/web/packages/clusterCrit/vignettes/clusterCrit.pdf
 * Combiner plusieurs partitions : http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.87.9937&rep=rep1&type=pdf
 * La meme  : http://strehl.com/download/strehl-jmlr02.pdf
 * Pour k means : https://arxiv.org/pdf/1712.08786.pdf
+
+## Kernel k-means
+Défaut de k means : seulement séparer les linéairements séparables, il faut des formes convexes (* voir question). Pour y remédier, transformer les données dans un espace de plus grande dimension (pk ?) avec une fonction non linéaire.
+* Explication sommaire de la transformation, 60eme page : https://cse.iitk.ac.in/users/piyush/courses/ml_autumn16/771A_lec10_slides.pdf
+* Explication et similarités avec spectral clustering : http://www.cs.utexas.edu/~inderjit/public_papers/kdd_spectral_kernelkmeans.pdf
+
+## Spectral clustering
+On forme la affinity matrix et on se sert des vecteurs propres eigen vectors. Explication sommaire : https://towardsdatascience.com/spectral-clustering-aba2640c0d5b
+* Tutorial : http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.165.9323

@@ -1,5 +1,6 @@
 \subsection{Méthodes}
 \subsubsection{K-means demo}
+\label{kmeans} 
 Si on est dans un minimum local pour la fonction de la somme des distances intra-classe :
 \[ \sum_{i\in I} \sum_{r\in R} \sum_{j\in D}\mu_{r,i} (x_{i,j}-c_{r,j})^2\]
 avec :
@@ -74,4 +75,18 @@ avec
 \[\bar{\delta_r} = \frac{1}{|r|}\sum_{i \in I_r}d(x_i,c_r)\]
 la distance moyenne des points d'un cluster à son centre.
 
-Plus l'indice est petit, plus la classification est bonne. Cela signifie en effet que la distance des points avec leur centre réduit alors que celle entre les clusters aumente.
+Plus l'indice est petit, plus la classification est bonne. Cela signifie en effet que la distance des points avec leur centre réduit alors que celle entre les clusters augmente.
+
+\subsection{Comparer et combiner les clusters}
+Nous sommes confrontés à un grand nombre de méthodes de clustering, et il s'agit à présent de savoir comment les combiner et les comparer entre eux.
+
+\subsubsection{Adjusted Rand Index}
+Adjusted rand score avec sklearn 
+
+\subsection{Autres techniques de clustering}
+Les k-means, qui s'appuyent sur la distance euclidienne (voir \ref{kmeans}), ne permetent pas d'appréshender des formes non convexes. Comme il n'y a aucune raisnon que les documents traités soient sous forme convexe, il est donc nécessaire de faire appel à d'autres techniques de clustering.
+
+\subsubsection{Clustering Hiérarchique}
+
+\subsubsection{Spectral Clustering}
+Cette méthode, résumée et comparée aux kernel k-means dans \cite{kernelSpectral2004}, s'appuie sur ...
