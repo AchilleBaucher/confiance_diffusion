@@ -42,3 +42,9 @@ Visualisation pour réduction de dimension python
 
 * stats en NLP
 https://www.cs.vassar.edu/~cs366/docs/Manning_Schuetze_StatisticalNLP.pdf
+
+## Constrained k-means
+Ajout de contraintes de liaisons et de non liasons de certains points dans l'algorithme.
+* Article original : https://web.cse.msu.edu/~cse802/notes/ConstrainedKmeans.pdf
+* Façon semi supervisée : https://epubs.siam.org/doi/pdf/10.1137/1.9781611972740.31
+* Contraintes grandes et bruitées : http://www.cs.cmu.edu/~dpelleg/download/lcvqe.pdf

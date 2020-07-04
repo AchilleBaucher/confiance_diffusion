@@ -1,7 +1,8 @@
 # Clustering
 Trouver des clusters et des distances entre lettres.
 * Résume et référence de nombreuses méthodes : http://edutechwiki.unige.ch/fr/Clustering_et_classification_hi%C3%A9rarchique_en_text_mining
-
+* https://hal.archives-ouvertes.fr/hal-00614071/document
+* Autres techniques : https://static.aminer.org/pdf/PDF/000/472/974/fast_and_effective_text_mining_using_linear_time_document_clustering.pdf
 ## À base de TF-IDF
 * TD-IDF puis DTW et classification de séries temporelles : https://www-ljk.imag.fr/membres/Marianne.Clausel/Fichiers/DefenseClustering.pdf
 * TF-IDF puis k-means : https://towardsdatascience.com/applying-machine-learning-to-classify-an-unsupervised-text-document-e7bb6265f52
@@ -53,3 +54,16 @@ https://pyclustering.github.io/docs/0.9.3/html/d2/d8b/namespacepyclustering_1_1c
 ## Critères de sélection
 https://statweb.stanford.edu/~gwalther/gap
 https://cran.r-project.org/web/packages/clusterCrit/vignettes/clusterCrit.pdf
+
+## Comparer la similarité de la partition de deux clusters
+* Adjusted rand index
+* Simple matching coefficient
+* Jaccard index
+* Article énumérant les solutions : https://i11www.iti.kit.edu/extra/publications/ww-cco-06.pdf
+* Autre meme chose : https://www.stat.washington.edu/mmp/Papers/compare-colt.pdf
+
+## Clustering on several partitions
+* Créer graphe O(n^2) des liens existants et prendre les composants complètement connectés : https://stackoverflow.com/questions/58373121/how-to-find-intersection-between-two-or-more-clusterings-of-the-same-dataset
+* Combiner plusieurs partitions : http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.87.9937&rep=rep1&type=pdf
+* La meme  : http://strehl.com/download/strehl-jmlr02.pdf
+* Pour k means : https://arxiv.org/pdf/1712.08786.pdf
