@@ -73,3 +73,5 @@ Peut passer en dimension + ...
 
 # Geodesic distance
 Généralisation du concept de distance effective sur des surfaces
+
+# Curse of dimensionality (fléau de la dimension)
