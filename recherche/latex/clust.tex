@@ -18,17 +18,16 @@ alors on a sa dérivée qui est nulle. On calcule donc sa dérivée par rapport 
 \]
 Cette dérivée est nulle pour tous les termes $c_{r,j}$ avec $r\neq r'$ et $j\neq j'$. On obtient donc la simplification suivante :
 \begin{eqnarray*}
-    \frac{d}{dc_{r',j'}}\sum_{i\in I} \mu_{r,i} (x_{i,j'}-c_{r',j'})^2 &=& 0\\
-    \frac{d}{dc_{r,j}}\sum_{i\in I} \mu_{r,i} (x_{i,j}-c_{r,j})^2 &=& 0  \text{ en remplacant $c_{r',j'}$ par $c_{r,j}$}\\
-    \sum_{i\in I}-2\mu_{r,i}(x_{i,j}-c_{r,j}) &=& 0\\
-    \sum_{i\in I}\mu_{r,i}(x_{i,j}-c_{r,j}) &=& 0\\
-    \sum_{i\in I}\mu_{r,i}x_{i,j} &=& \sum_{i\in I}\mu_{r,i}c_{r,j}\\
-    \sum_{i\in I}\mu_{r,i}x_{i,j} &=& (\sum_{i\in I}\mu_{r,i})c_{r,j}\\
-    \sum_{i\in I}\mu_{r,i}x_{i,j} &=& |r|c_{r,j} \text{ avec $|r|$ nombre de points de r}\\
-    c_{r,j} &=& \frac{\sum_{i\in I}\mu_{r,i}x_{i,j}}{|r|}\\
-    &=& \frac{\sum_{i\in I_r}x_{i,j}}{|r|}
+    && \frac{d}{dc_{r',j'}}\sum_{i\in I} \mu_{r,i} (x_{i,j'}-c_{r',j'})^2 = 0\\
+    && \frac{d}{dc_{r,j}}\sum_{i\in I} \mu_{r,i} (x_{i,j}-c_{r,j})^2 = 0  \text{ en remplacant $c_{r',j'}$ par $c_{r,j}$ pour simplifier les notation}\\
+    &&\sum_{i\in I}-2\mu_{r,i}(x_{i,j}-c_{r,j}) = 0\\
+    &&\sum_{i\in I}\mu_{r,i}(x_{i,j}-c_{r,j}) = 0\\
+    &&\sum_{i\in I}\mu_{r,i}x_{i,j} = \sum_{i\in I}\mu_{r,i}c_{r,j}\\
+    &&\sum_{i\in I}\mu_{r,i}x_{i,j} = (\sum_{i\in I}\mu_{r,i})c_{r,j}\\
+    &&\sum_{i\in I}\mu_{r,i}x_{i,j} = |r|c_{r,j} \text{ avec $|r|$ nombre de points de r}\\
+    &&c_{r,j} = \frac{\sum_{i\in I}\mu_{r,i}x_{i,j}}{|r|}\\
+    &&= \frac{\sum_{i\in I_r}x_{i,j}}{|r|}
 \end{eqnarray*}
-
 \subsection{Trouver le bon nombre de clusters}
 \subsubsection{Somme des variances intra-groupes}
 \[
