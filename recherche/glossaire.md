@@ -61,7 +61,12 @@ Dimension Reduction : Technique pour la réduction de dimension. La théorie s'a
 * Suppose que les données sont uniformément représentées sur une variété géométrique inconnue.
 * On peut trouver une métrique de Riemann tel que c'est le cas.
 * ...
-
+* Explication supplémentaires : https://towardsdatascience.com/how-exactly-umap-works-13e3040e1668
+* Mieux que t-sne car
+ * t sne occupe trop de mémoire
+ * Ne prend pas en compte la structure globale des données (ne gère bien que des distances intra clusters et non inter clusters, genre 2 clusters proches sont pas forcément proches)
+ * Ne réduit qu'en 2 ou 3 dimensions
+ *
 # Géométrie Riemannienne
 Branche de la géométrie différentielle sur des formes ou existent une notion d'angle et de distance.
 
@@ -75,3 +80,12 @@ Peut passer en dimension + ...
 Généralisation du concept de distance effective sur des surfaces
 
 # Curse of dimensionality (fléau de la dimension)
+
+# Distribution à queue lourde (heavy tailed distribution)
+Distribution à queue non exponentiellement bornée, ex : log normal, pareto ...
+
+# Adjusted rand index
+Mesure l'accord de deux partitions
+
+# Normalized Mutual Information
+Mesure l'accord de deux partitions d'une autre manière

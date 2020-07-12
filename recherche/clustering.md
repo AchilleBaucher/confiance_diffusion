@@ -76,3 +76,33 @@ Défaut de k means : seulement séparer les linéairements séparables, il faut 
 ## Spectral clustering
 On forme la affinity matrix et on se sert des vecteurs propres eigen vectors. Explication sommaire : https://towardsdatascience.com/spectral-clustering-aba2640c0d5b
 * Tutorial : http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.165.9323
+
+## k-prototypes, k-modes
+Extension du k-means à des objets non-quantifiables, remplace la distance par la dissimilarité
+
+## Constrained k-means
+Ajout de contraintes de liaisons et de non liaisons de certains points dans l'algorithme.
+* Article original : https://web.cse.msu.edu/~cse802/notes/ConstrainedKmeans.pdf
+* Façon semi supervisée : https://epubs.siam.org/doi/pdf/10.1137/1.9781611972740.31
+* Contraintes grandes et bruitées : http://www.cs.cmu.edu/~dpelleg/download/lcvqe.pdf
+* mteur graphique opengl.org
+
+## Clustering ensemble
+Combiner plusieurs partitions.
+##  Énumération et explication de différentes méthodes : https://link.springer.com/content/pdf/10.1007/s13042-017-0756-7.pdf
+1. Création des différents partitionnements
+ * Diversité d'approches pur capturer max d'infos
+ * Bootstrap et resampling pas trop capté
+ * k-means avec différentes valeurs de k ou bien diiférents types de clustering,
+2. Fonction de consensus
+* Énumération présente orignialement dans https://arxiv.org/pdf/1606.01160.pdf
+* The object co-occurrence approach : matrice de co-appartenance à un même cluster
+* The median partition approach : Trouver la partition qui minimise la dissimilarité avec toutes les autres.
+* -> Dans notre cas, co-occurences plus intéressantes puisqu'on s'intéresse à repérer des sujets précis et non pas à tout forcément clusteriser.
+3. Évaluation   
+* Précision avec ARI ou Normalized Mutual Information
+* Stabilité avec moyenne et std de plusieurs tests en changeant légèrement les paramètres d'initialisation
+
+## Python
+* Cluster_Ensembles : Pipy cool
+* OpenEnssemble : jmlr cool

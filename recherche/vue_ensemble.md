@@ -6,12 +6,13 @@
 # Clustering de textes
 ## Préparation
 ### Technique
+* Mise à jour des données
 * Extraire les députés et leurs noms.  *associer_auteurs.ypnb*
 
 ### Étude des données
 * voir rapport metriq
 * Comment sont structurées les lettres ? *observation_lettres.ipynb*, *excel*. Lettre surlignée. Forme permière phrase, dernière diffuse.
-* Est-ce que les députés sont spécialisés ? *deputes_specializes.ipynb*. graphiques, indicateurs quadratique et gini, conclure un peu mais pas extrêmement frappant
+* Est-ce que les députés sont spécialisés ? *deputes_specializes.ipynb*. graphiques, indicateurs quadratique et gini. Conclure un peu mais pas extrêmement frappant
 
 ## Représentation vectorielle
 ### Word embedding pour trucs courts
@@ -35,7 +36,7 @@ Les deux chapitres suivants ont des liens avec bac à sable dans *clustering.ipy
 * xmeans. Expliquer et appliquer.
 * agglomerative. Expliquer, methods et metrics, et appliquer, dendogramme.
 * spectral clustering
-* Combinaisons. Comparer, combiner les partitions, stack, ensemble
+* Combinaisons. Comparer, ARI, combiner les partitions, stack, ensemble
 
 ### Annexes
 * curse of dimensionality. *roue_libre.ipynb*. Explication trucs de la thèse (sparsity et creux et hubness), liens et graphiques avec nos données. Nécessité de réduire la dimension.
