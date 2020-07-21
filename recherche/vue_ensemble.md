@@ -1,7 +1,7 @@
 * quoi : clustering et similarités entre textes, en déduire des liens entre députés
 * pourquoi : étudier blabla assemblée ntionale
 * comment : essayer variété de méthodes de clustering de textes, Python
-* résultat : pas encore
+* résultats : propres à chaque catégorie, pas encore de conclusion globale 
 
 # Clustering de textes
 ## Préparation

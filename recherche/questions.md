@@ -1,5 +1,5 @@
-## Avancement et questions pour le 6 Juillet
-### Avancement
+# Avancement et questions pour le 6 Juillet
+## Avancement
 * k-means dimensions spérieures : pk traits ?
 * Changement et jeux avec linkage et affinity, dans tous les graphiques + distances à la fin
 * Autres distances possibles ? : **braycurtis**, **canberra**, **chebyshev**, **cityblock**, **correlation**, **cosine**, **dice**, **euclidean**, **hamming**, **jaccard**, **jensenshannon**, **kulsinski**, **mahalanobis**, **matching**, **minkowski**, **rogerstanimoto**, **russellrao**, **seuclidean**, **sokalmichener**, **sokalsneath**, **sqeuclidean**, **yule**
@@ -28,3 +28,17 @@
 * Comment repérer la première bosse, celle qui nous importe pour le parler de la même chose
 * Nice Nîmes
 * Armand
+
+# Avancement et questions pour le 21 Juillet
+## Avancement
+* Lecture curse of dimensionnality et graphiques associés (*roue_libre.ipynb*)
+* Explained variance (*clustering*) pas bcp de cassure nette, assez peu d'explication
+* Affichage de tous les dendogrammes systématiquement.
+* Matrice de comparaison de beaucoup partitions *organized_clustering.ipynb*
+* Lecture début clustering ensemble *clustering.md*
+* Essai en cours de OpenEnssemble
+
+* Résumé global commencé (*vue_ensemble.md*)
+
+## Questions et suite
+* 
