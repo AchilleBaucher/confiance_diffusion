@@ -37,8 +37,8 @@
 * Matrice de comparaison de beaucoup partitions *organized_clustering.ipynb*
 * Lecture début clustering ensemble *clustering.md*
 * Essai en cours de OpenEnssemble
-
+* Custering ensemble : CO et mutual
 * Résumé global commencé (*vue_ensemble.md*)
 
 ## Questions et suite
-* 
+*

@@ -106,3 +106,9 @@ Combiner plusieurs partitions.
 ## Python
 * Cluster_Ensembles : Pipy cool
 * OpenEnssemble : jmlr cool
+
+# Visual assemsment of (cluster) tendency (VAT)
+* Bzedek
+* Tente de mettre dans le bon ordre la matrice des dissimilarités afin d'en visualiser les formes.
+* article original : https://ieeexplore.ieee.org/document/1007487
+* python : https://pyclustertend.readthedocs.io/en/latest/

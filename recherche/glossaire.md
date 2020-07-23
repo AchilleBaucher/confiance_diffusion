@@ -88,4 +88,4 @@ Distribution à queue non exponentiellement bornée, ex : log normal, pareto ...
 Mesure l'accord de deux partitions
 
 # Normalized Mutual Information
-Mesure l'accord de deux partitions d'une autre manière
+Mesure l'accord de deux partitions d'une autre manière. Mesure symétrique de l'information partagée.

@@ -1,7 +1,7 @@
 * quoi : clustering et similarités entre textes, en déduire des liens entre députés
-* pourquoi : étudier blabla assemblée ntionale
+* pourquoi : étudier blabla assemblée nationale
 * comment : essayer variété de méthodes de clustering de textes, Python
-* résultats : propres à chaque catégorie, pas encore de conclusion globale 
+* résultats : propres à chaque catégorie, pas encore de conclusion globale
 
 # Clustering de textes
 ## Préparation
@@ -11,7 +11,7 @@
 
 ### Étude des données
 * voir rapport metriq
-* Comment sont structurées les lettres ? *observation_lettres.ipynb*, *excel*. Lettre surlignée. Forme permière phrase, dernière diffuse.
+* Comment sont structurées les lettres ? *observation_lettres.ipynb*, *excel*. Lettre surlignée. Forme première phrase, dernière diffuse.
 * Est-ce que les députés sont spécialisés ? *deputes_specializes.ipynb*. graphiques, indicateurs quadratique et gini. Conclure un peu mais pas extrêmement frappant
 
 ## Représentation vectorielle
