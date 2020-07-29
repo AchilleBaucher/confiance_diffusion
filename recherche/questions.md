@@ -42,3 +42,16 @@
 
 ## Questions et suite
 *
+# 29 Juillet
+## Fait
+* Pureté des rubriques
+* Application sur es titres non pertinents car n'a pas appris le contexte des mots
+## Mathématiques derrières, à expliquer et écrire :
+* Scores de ressemblance d'un partitionnement multiple : CO,Normalized mutual information
+* Comparaisons de partitions : asjusted rand index/score
+* Scores de mesure de qualité : calinski harabasz, davies bouldin
+* Perplexity, entropie croisée, inverse probabilité
+
+
+## Idée : à quel moment dit-on que ce sont des bons clusters :
+* Mesure de qualité d'un cluster, trouver les bons
