@@ -112,3 +112,18 @@ Combiner plusieurs partitions.
 * Tente de mettre dans le bon ordre la matrice des dissimilarités afin d'en visualiser les formes.
 * article original : https://ieeexplore.ieee.org/document/1007487
 * python : https://pyclustertend.readthedocs.io/en/latest/
+
+# Deep clustering
+## A Self-Training Approach for Short Text Clustering
+https://www.aclweb.org/anthology/W19-4322/
+* Smooth Inverse Frequency embedding
+* Autoencodeur to map SIF vectors to low dimensionnal vectors (voir Hinton)
+* Self trainning :
+ * Apply cluter algorithm (k-means) on this
+ * Assign a soft distribution probability to belong to each cluster to each point
+ * Calculate an auxiliary probability distribution, according more importance to high confidence points
+ * Fine-tune autoencoder to match this second distribution, with KL-divergence
+
+## Reduce the dimensionaity of data with neural networks
+https://www.cs.toronto.edu/~hinton/science.pdf
+* Utilise une version améliorée de l'ACP.

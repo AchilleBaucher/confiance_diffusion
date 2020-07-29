@@ -1,0 +1,91 @@
+\subsection{Méthodes}
+\subsubsection{K-means demo}
+\label{kmeans} 
+Si on est dans un minimum local pour la fonction de la somme des distances intra-classe :
+\[ \sum_{i\in I} \sum_{r\in R} \sum_{j\in D}\mu_{r,i} (x_{i,j}-c_{r,j})^2\]
+avec :
+\begin{itemize}
+    \item $I$ : Ensemble des points
+    \item $R$ : Ensemble des clusters
+    \item $D$ : Dimensions
+    \item $\mu_{r,i} :$ $1$ ou $0$ selon que le point $i$ appartient ou non au cluster $r$
+    \item $x_{i,j}$ : Valeur dans la dimension $j$ du point $i$
+    \item $c_{r,j}$ : Valeur dans la dimension $j$ du centre du cluster $r$
+\end{itemize}
+alors on a sa dérivée qui est nulle. On calcule donc sa dérivée par rapport à une dimension $j'$ du centre d'un cluster $r'$, donc par rapport à $c_{r',j'}$ :
+\[
+    \frac{d}{dc_{r',j'}}\sum_{i\in I} \sum_{r\in R} \sum_{j\in D}\mu_{r,i} (x_{i,j}-c_{r,j})^2 = 0
+\]
+Cette dérivée est nulle pour tous les termes $c_{r,j}$ avec $r\neq r'$ et $j\neq j'$. On obtient donc la simplification suivante :
+\begin{eqnarray*}
+    && \frac{d}{dc_{r',j'}}\sum_{i\in I} \mu_{r,i} (x_{i,j'}-c_{r',j'})^2 = 0\\
+    && \frac{d}{dc_{r,j}}\sum_{i\in I} \mu_{r,i} (x_{i,j}-c_{r,j})^2 = 0  \text{ en remplacant $c_{r',j'}$ par $c_{r,j}$ pour simplifier les notation}\\
+    &&\sum_{i\in I}-2\mu_{r,i}(x_{i,j}-c_{r,j}) = 0\\
+    &&\sum_{i\in I}\mu_{r,i}(x_{i,j}-c_{r,j}) = 0\\
+    &&\sum_{i\in I}\mu_{r,i}x_{i,j} = \sum_{i\in I}\mu_{r,i}c_{r,j}\\
+    &&\sum_{i\in I}\mu_{r,i}x_{i,j} = (\sum_{i\in I}\mu_{r,i})c_{r,j}\\
+    &&\sum_{i\in I}\mu_{r,i}x_{i,j} = |r|c_{r,j} \text{ avec $|r|$ nombre de points de r}\\
+    &&c_{r,j} = \frac{\sum_{i\in I}\mu_{r,i}x_{i,j}}{|r|}\\
+    &&= \frac{\sum_{i\in I_r}x_{i,j}}{|r|}
+\end{eqnarray*}
+\subsection{Trouver le bon nombre de clusters}
+\subsubsection{Somme des variances intra-groupes}
+\[
+W  = \sum_{r\in R}\sum_{i\in I_r}\mu_{r,i}||x_{i}-c_{r}||^2
+\]
+Ou, en version blabla :
+\[
+W  = \sum_{r\in R}\sum_{i\in I_r}\sum_{j\in D}\mu_{r,i}||x_{i,j}-c_{r,j}||^2
+\]
+
+\subsubsection{Calinski-Harabasz}
+\url{https://scikit-learn.org/stable/modules/clustering.html}
+
+
+Rapport entre la variance inter-groupes et des variance intra-groupes.
+
+La variance inter-groupes est la somme des distances entre le centres des clusters et le centre global, pondéré par le nombre de points de chaque cluster. Elle mesure la dispersion des clusters.
+\[
+V = \sum_{r\in R}|r| \|c_{r}-c\|
+\]
+avec $c$ le centre global.
+
+La variance intra-groupes est la somme des distances des points d'un cluster avec le centre de ce cluster, divisé par le nombre de points de ce cluster. Elle mesure la dispersion d'un cluster.
+
+\[
+W_r = \sum_{r\in R}\frac{1}{\|I_r\|}\sum_{i\in I_r}\|x_{i}-c_{r}\|
+\]
+
+Pour obtenir l'indice de Calinski-Harabasz, on divise la variance inter-groupes par la somme des variances intra-groupes. Le tout est ocefficienté par le rapport entre la différence entre le nombre de points et le nombre de clusters désirés et le nombre de clusters moins 1.
+
+\[
+S_{CH} = \frac{(n-|R|)V}{(|R|-1)\sum_{r\in R}W_r}
+\]
+
+Plus l'indice est grand, meilleure est la classification, car cela signifie que les clusters sont plus dispersés enre eux et que les points d'un clusters sont moins dispersés.
+
+\subsubsection{Davies-bouldin}
+L'indice calcule la somme sur chaque cluster de : le maximum pour tous les autres clusters de la somme de la distance moyenne avec leur centre des deux clusters et la distance entre les centres de deux clusters.
+
+\[
+S_{DB}  = \frac{1}{|R|}\sum_{r\in R}\mathrm{max}_{r'\neq r}\left(\frac{\bar{\delta_r}+\bar{\delta_{r'}}}{d(c_r,c_{r'})}\right)
+\]
+avec
+\[\bar{\delta_r} = \frac{1}{|r|}\sum_{i \in I_r}d(x_i,c_r)\]
+la distance moyenne des points d'un cluster à son centre.
+
+Plus l'indice est petit, plus la classification est bonne. Cela signifie en effet que la distance des points avec leur centre réduit alors que celle entre les clusters augmente.
+
+\subsection{Comparer et combiner les clusters}
+Nous sommes confrontés à un grand nombre de méthodes de clustering, et il s'agit à présent de savoir comment les combiner et les comparer entre eux.
+
+\subsubsection{Adjusted Rand Index}
+Adjusted rand score avec sklearn 
+
+\subsection{Autres techniques de clustering}
+Les k-means, qui s'appuyent sur la distance euclidienne (voir \ref{kmeans}), ne permetent pas d'appréshender des formes non convexes. Comme il n'y a aucune raisnon que les documents traités soient sous forme convexe, il est donc nécessaire de faire appel à d'autres techniques de clustering.
+
+\subsubsection{Clustering Hiérarchique}
+
+\subsubsection{Spectral Clustering}
+Cette méthode, résumée et comparée aux kernel k-means dans \cite{kernelSpectral2004}, s'appuie sur la matrice des affinités, qui peut donc être calculée avec n'importe quelle mesure de similarité. 
