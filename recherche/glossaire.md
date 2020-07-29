@@ -148,7 +148,7 @@ Loi de probabilité pour une seule variable comprise entre 0 et 1. Paramétrée 
 
 # Perplrexité
 * https://towardsdatascience.com/perplexity-in-language-models-87a196019a94
-Mesure d'évaluation intrinsèque (sans faire appel à une tâhe et comparaison extérieure) de modèles de langages.  Différents modes de calculs :
+Mesure d'évaluation intrinsèque (sans faire appel à une tâche et comparaison extérieure) de modèles de langages.  Différents modes de calculs :
 1. Probabilité inverse normalisée du jeu de donnée test
 Donne un score de non réalisme du jeu d'entrée, normalisé par le nombre de mots à chaque fois. Pour cela, une petite astuce en passant en log pour avoir une somme pondérable par le nombre de mots puis en exp pour revenir en obtenant une racine.
 2. Exponentielle de l'entropie croisée
