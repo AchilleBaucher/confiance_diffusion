@@ -55,3 +55,12 @@
 
 ## Idée : à quel moment dit-on que ce sont des bons clusters :
 * Mesure de qualité d'un cluster, trouver les bons
+
+## Faire
+[X] Distance maximale intra cluster
+* Distinction des Autres
+* Réduire nombre groupes
+* Appliquer visualisation clustering 50-100 dim
+* Évolution qualité clustering nombre de dimensions
+* Ce que j'aurais aimé faire (perspectives)
+* Perplexity
