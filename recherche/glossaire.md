@@ -1,3 +1,4 @@
+
 # Analyse multivariée /statistiques multivariées
 S'intéresse à des lois de probabilités à plusieurs variables.
 
@@ -139,7 +140,7 @@ Méthode d'optimisation
 2 réseaux de neurones :
 * Encoder : map l'entrée vers une représentation cachée (souvent de dimension inférieure)
 * Decodeur : map la représentation cachée vers l'espace d'entrée
-* Entraîné à reproduire l'entrée à partir de celle-ci(généralement avec erreur quadratique et descente de gradient)
+* Entraîné à reproduire l'entrée à partir de celle-ci (généralement avec erreur quadratique et descente de gradient)
 * Permet d'obtenir un mapping non linéaire réduisant la dimension (dans l'espace caché)
 * Initialiser un autoencoder: https://www.cs.toronto.edu/~hinton/science.pdf
 

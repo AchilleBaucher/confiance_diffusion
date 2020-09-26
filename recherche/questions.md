@@ -64,3 +64,12 @@
 * Évolution qualité clustering nombre de dimensions
 * Ce que j'aurais aimé faire (perspectives)
 * Perplexity
+[X] Évolution des valeurs singluières LSA, et en déduire la dimension choisie
+[ ] Calcul de la complexité de Truncated SVD
+
+## Questions prochaine fois
+* Citer l'article original même si on a lu que le wiki ou scikit doc ? Référencer la documentation ?
+* Niveau d'explication minimal requis (tfidf, nmf ...)
+* Etat de l'art tout au début ? parce que tout est état de l'art dans une étude exploratoire
+* RANDOM MIXTURE = distributions de probabilités
+* Etat de l'art = truc à part ?

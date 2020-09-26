@@ -33,7 +33,7 @@ Les deux chapitres suivants ont des liens avec bac à sable dans *clustering.ipy
 * ACP + umap + t-sne sur chaque représentation.
 
 ## Clustering avec les représentations obtenues
-* Évaluation. indices de clustering (inertie davies hrabasz ...), meilleurs k
+* Évaluation. indices de clustering (inertie davies harabasz ...), meilleurs k
 * kmeans. Expliquer et appliquer.
 * xmeans. Expliquer et appliquer.
 * agglomerative. Expliquer, methods et metrics, et appliquer, dendogramme.

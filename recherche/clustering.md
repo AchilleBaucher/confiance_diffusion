@@ -2,7 +2,8 @@
 Trouver des clusters et des distances entre lettres.
 * Résume et référence de nombreuses méthodes : http://edutechwiki.unige.ch/fr/Clustering_et_classification_hi%C3%A9rarchique_en_text_mining
 * https://hal.archives-ouvertes.fr/hal-00614071/document
-* Autres techniques : https://static.aminer.org/pdf/PDF/000/472/974/fast_and_effective_text_mining_using_linear_time_document_clustering.pdf
+* Autres techniques :ted rand index https://static.aminer.org/pdf/PDF/000/472/974/fast_and_effective_text_mining_using_linear_time_document_clustering.pdf
+
 ## À base de TF-IDF
 * TD-IDF puis DTW et classification de séries temporelles : https://www-ljk.imag.fr/membres/Marianne.Clausel/Fichiers/DefenseClustering.pdf
 * TF-IDF puis k-means : https://towardsdatascience.com/applying-machine-learning-to-classify-an-unsupervised-text-document-e7bb6265f52
@@ -12,7 +13,7 @@ Pour déduire plus la sémantique latente, le sens du texte, que le champs lexic
 * Explication du calcul : http://blog.onyme.com/stats-semantique-lsa/
 Effectuer une SVD sur la matrice document-terme avec score d'occurence ou du tfidf. Ne sélectionner que les valeurs singulières les plus hautes, avec un rang k choisi. Calculer l'approximation de la matrice au rang k. En déduire les distances (cosine) entre les deocuments.
 * Article original : http://lsa.colorado.edu/papers/JASIS.lsi.90.pdf
-* Avec python : https://www.pluralsight.com/guides/topic-identification-nlp ou https://www.analyticsvidhya.com/blog/2018/10/stepwise-guide-topic-modeling-latent-semantic-analysis/
+* Avec python : https://www.analyticsvidhya.com/blog/2018/10/stepwise-guide-topic-modeling-latent-semantic-analysis/
 * Version probabiliste : https://arxiv.org/pdf/1301.6705.pdf
 
 ## Hyperspace Analogue to Language (HAL)
@@ -124,6 +125,16 @@ https://www.aclweb.org/anthology/W19-4322/
  * Calculate an auxiliary probability distribution, according more importance to high confidence points
  * Fine-tune autoencoder to match this second distribution, with KL-divergence
 
+* Code : https://github.com/hadifar/stc_clustering
+* Autre Keras : https://github.com/fferroni/DEC-Keras
 ## Reduce the dimensionaity of data with neural networks
 https://www.cs.toronto.edu/~hinton/science.pdf
 * Utilise une version améliorée de l'ACP.
+
+## Plus
+Quelques références supplémentaires
+* Énumère quelques méthodes et leur évaluation : https://hal.archives-ouvertes.fr/hal-00614071/document
+* https://arxiv.org/abs/1511.06335
+* https://arxiv.org/pdf/1301.6705.pdf
+* https://arxiv.org/pdf/1606.01160.pdf
+*

@@ -45,3 +45,6 @@ Visualisation pour réduction de dimension python
 
 * stats en NLP
 https://www.cs.vassar.edu/~cs366/docs/Manning_Schuetze_StatisticalNLP.pdf
+
+* dirichlet hiérarchique, peut servir à connaitre le bon nombre de topic
+https://people.eecs.berkeley.edu/~jordan/papers/hierarchical-dp.pdf
